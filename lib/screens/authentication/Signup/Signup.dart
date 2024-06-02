@@ -217,7 +217,7 @@ class SignupScreen extends StatelessWidget {
                       color: AppColors.primarybackColor,
                       textDecoration: TextDecoration.underline,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     GestureDetector(
