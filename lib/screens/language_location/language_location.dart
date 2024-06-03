@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   controller: TextEditingController(),
           suffixIcon: Icon(Icons.voice_over_off_outlined,size: 25,color:AppColors.primarybackColor,),
           preffixIcon: Icon(Icons.search,size: 30,color:AppColors.searchIconColor ,),
+                      textcolor: AppColors.primarybackColor,
 
                   hintText: 'Search for a Language',
                   keyboardType: TextInputType.name),

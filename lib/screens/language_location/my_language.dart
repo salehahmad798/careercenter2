@@ -35,6 +35,7 @@ class _MyLanguageScreenState extends State<MyLanguageScreen> {
               // MyForm(),
               CustomTextField(
           preffixIcon: Icon(Icons.search,size: 30,color:AppColors.searchIconColor ,),
+                      textcolor: AppColors.primarybackColor,
 
                   controller: TextEditingController(),
                   suffixIcon: Icon(

@@ -63,7 +63,7 @@ class CustomTextField extends StatelessWidget {
     this.hasTopIcon = false,
     this.maxLength,
     this.textFieldheight,
-    this.textAlign,
+    this.textAlign, required textcolor,
   }) : super(key: key);
 
   @override

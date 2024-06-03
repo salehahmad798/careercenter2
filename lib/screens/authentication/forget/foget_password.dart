@@ -1,4 +1,5 @@
 import 'package:career_center/screens/authentication/Signup/Signup.dart';
+import 'package:career_center/screens/authentication/forget/otp_screen.dart';
 import 'package:career_center/screens/authentication/login/login_controller.dart';
 import 'package:career_center/screens/language_location/language_location.dart';
 import 'package:career_center/utils/app_colors.dart';
@@ -11,14 +12,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({Key? key}) : super(key: key);
+class ForgetPasswordScreen extends StatefulWidget {
+  ForgetPasswordScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
+}
+
+class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   final loginController = Get.put(LoginController());
+
+var foo = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(text: 'Sign in'),
+      appBar: CustomAppBar(text: 'Forget Password'),
       backgroundColor: AppColors.primarywhiteColor,
       body: SingleChildScrollView(
         child: SafeArea(
@@ -35,25 +44,38 @@ class LoginScreen extends StatelessWidget {
                   ),
                   child: Center(
                     child: Image.asset(
-                      AppImaes.CareerCenterImage,
-                      width: 164.w,
-                      height: 164.h,
+                      AppImaes.forgetpassword,
+                      width: 429.w,
+                      height: 333.h,
                     ),
                   ),
                 ),
                 
                 CText(
-                  text: 'User Name:',
+                  text: '''Select which method you want to reset your password''',
                   fontSize: 16,
                   color: AppColors.headingcolor,
                 ),
+                SizedBox(height: 23.h,),
                 Column(
                   children: [
                     CustomTextField(
                       textcolor: AppColors.primarybackColor,
-                      preffixIcon: Icon(Icons.person),
+                      
+                      preffixIcon: Icon(Icons.message,color: AppColors.primaryappcolor,size: 32,),
                       controller: loginController.emailController,
-                      hintText: 'Shaukat Ali',
+                      hintText: '+6396*****92',
+                      suffixIcon:IconButton(onPressed: (){
+                        setState(() => foo = true);
+                      },icon: Icon(Icons.check_circle_outline_rounded,color: AppColors.primaryappcolor,),),
+                      hasSuffix: true,
+                      
+              //         suffixIcon: Checkbox(
+              //   value: foo,
+              //   onChanged: ( value) {
+              //     setState(() => foo = value!);
+              //   },
+              // ),
                       // color: AppColors.primarybackColor,
                       keyboardType: TextInputType.emailAddress,
                       function: (value) {
@@ -67,84 +89,57 @@ class LoginScreen extends StatelessWidget {
                    
                   ],
                 ),
-                
-                 CText(
-                  text: 'Email:',
-                  fontSize: 16,
-                  color: AppColors.headingcolor,
-                ),
                 Column(
                   children: [
-                    CustomTextField(
-                      controller: loginController.passwordController,
-                      hintText: 'abc123@gmail.com',
-                      keyboardType: TextInputType.emailAddress,
-                      // textcolor: AppColors.blackColor,
-                      preffixIcon: Icon(Icons.mail),
-                      hasSuffix: true,
-                      isPassword: true,
+                    InkWell(onTap: () {
+                         Checkbox(
+                value: foo,
+                onChanged: ( value) {
+                  setState(() => foo = value!);
+                },
+              );
+                    },
+                      child: CustomTextField(
+                        controller: loginController.passwordController,
+                        hintText: 'Jor***.domain.com',
+                        keyboardType: TextInputType.emailAddress,
                       textcolor: AppColors.primarybackColor,
 
-                      suffixIcon: const Icon(
-                        Icons.visibility,
-                        color: AppColors.primarybackColor,
+                        // textcolor: AppColors.blackColor,
+                        preffixIcon: Icon(Icons.mail,color: AppColors.primaryappcolor,size: 30,),
+                        hasSuffix: true,
+                        // isPassword: true,
+                        suffixIcon: const Icon(
+                          Icons.check_circle_outline,
+                          color: AppColors.primarybackColor,
+                        ),
+                      
+                        suffixIconSize: 20,
+                        function: (value) {
+                          if (value!.isEmpty) {
+                            return "Provide Email";
+                          }
+                          return null;
+                        },
                       ),
-                      suffixIconSize: 20,
-                      function: (value) {
-                        if (value!.isEmpty) {
-                          return "Provide Email";
-                        }
-                        return null;
-                      },
                     ),
                   ],
                 ),
                
-                // PrimaryButton(
-                //     text: "Log into your account",
-                // onTap: () {
-                //   Get.to(() => const BotomnavbarScreen());
-                // }),
-                SizedBox(height: 30.h,),
+               
+                SizedBox(height: 61.h,),
                 PrimaryButton2(
-                    text: 'Log In',
+                    text: 'Continue',
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignupScreen()));
+                              builder: (context) => OtpScreen()));
                     }),
                 SizedBox(
                   height: 230.h,
                 ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CText(
-                      text: "Don’t have an account?",
-                      fontSize: 13.sp,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.primarybackColor,
-                      textDecoration: TextDecoration.underline,
-                    ),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Get.to(() => SignupScreen());
-                      },
-                      child: CText(
-                        text: "Register",
-                        fontSize: 13.sp,
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.primaryappcolor,
-                        textDecoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ],
-                ),
               ],
             ),
           ),

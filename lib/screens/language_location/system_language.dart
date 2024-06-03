@@ -26,6 +26,8 @@ class _SystemLanguageState extends State<SystemLanguage> {
           children: [
             CustomTextField(
                     controller: TextEditingController(),
+                      textcolor: AppColors.primarybackColor,
+
           preffixIcon: Icon(Icons.search,size: 30,color:AppColors.searchIconColor ,),
 
                     hintText: 'Search for a Language',

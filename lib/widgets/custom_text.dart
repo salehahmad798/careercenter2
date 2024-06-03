@@ -18,10 +18,12 @@ class CText extends StatelessWidget {
   final TextDecoration? textDecoration;
   final TextOverflow? overflow;
 
+final TextStyle? style;
   CText({
     Key? key,
     required this.text,
     this.color,
+    this.style,
     required this.fontSize,
     this.alignText = TextAlign.start,
     this.maxLines,
@@ -30,6 +32,7 @@ class CText extends StatelessWidget {
     this.softWrap = true,
     this.minFontSize,
     this.textDecoration,
+    
     this.fontFamily,
     this.lineHeight,  this.overflow,
   }) : super(key: key);

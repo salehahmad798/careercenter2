@@ -1,3 +1,4 @@
+import 'package:career_center/screens/authentication/forget/foget_password.dart';
 import 'package:career_center/screens/authentication/login/login_controller.dart';
 import 'package:career_center/screens/language_location/language_location.dart';
 import 'package:career_center/utils/app_colors.dart';
@@ -45,6 +46,8 @@ class SignupScreen extends StatelessWidget {
                       preffixIcon: const Icon(Icons.person),
                       controller: loginController.emailController,
                       hintText: 'Shaukat Ali',
+                      textcolor: AppColors.primarybackColor,
+
                       // color: AppColors.primarybackColor,
                       keyboardType: TextInputType.emailAddress,
                       function: (value) {
@@ -74,7 +77,8 @@ class SignupScreen extends StatelessWidget {
                       controller: loginController.passwordController,
                       hintText: 'abc123@gmail.com',
                       keyboardType: TextInputType.emailAddress,
-                      // textcolor: AppColors.blackColor,
+                      textcolor: AppColors.primarybackColor,
+
                       preffixIcon: const Icon(Icons.mail),
                       hasSuffix: true,
                       isPassword: true,
@@ -102,6 +106,7 @@ class SignupScreen extends StatelessWidget {
                   children: [
                     CustomTextField(
                       preffixIcon: const Icon(Icons.call),
+                      textcolor: AppColors.primarybackColor,
                       controller: loginController.emailController,
                       hintText: '+92 302 3000600',
                       // color: AppColors.primarybackColor,
@@ -130,6 +135,8 @@ class SignupScreen extends StatelessWidget {
                       preffixIcon: const Icon(Icons.lock),
                       hasSuffix: true,
                       isPassword: true,
+                      textcolor: AppColors.primarybackColor,
+
                       suffixIcon: const Icon(
                         Icons.visibility,
                         color: AppColors.primarybackColor,
@@ -159,7 +166,7 @@ class SignupScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomeScreen()));
+                              builder: (context) =>  ForgetPasswordScreen()));
                     }),
                 SizedBox(
                   height: 21.h,

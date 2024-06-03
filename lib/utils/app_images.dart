@@ -22,9 +22,9 @@ class AppImaes {
   
   static const String facebook = 'assets/app_images/facebook (2).png';
   static const String apple = 'assets/app_images/apple.png';
-  // static const String successchange = 'assets/app_images/successfully.png';
-  // static const String heart = 'assets/app_images/heart.png';
-  // static const String googlepay = 'assets/app_images/GooglePay.png';
+  static const String forgetpassword = 'assets/app_images/forgetpassword.png';
+  static const String newpassword = 'assets/app_images/newpassword.png';
+  static const String Congratulations = 'assets/app_images/Congratulations.png';
   // static const String paypal = 'assets/app_images/PayPal.png';
   // static const String applepay = 'assets/app_images/ApplePay.png';
   // static const String headphoneimage='assets/app_images/headphone image.png';
