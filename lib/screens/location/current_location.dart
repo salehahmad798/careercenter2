@@ -64,7 +64,7 @@ class _CurrentLocationState extends State<CurrentLocation> {
     return Scaffold(
       appBar: CustomAppBar(text: 'Current Location'),
       body: SnappingSheet(
-        snappingPositions: [
+        snappingPositions: const [
           // SnappingPosition.factor(
           //   positionFactor: 0.0,
           //   snappingCurve: Curves.easeOutExpo,
@@ -76,7 +76,7 @@ class _CurrentLocationState extends State<CurrentLocation> {
             snappingDuration: Duration(milliseconds: 1750),
             positionFactor: 0.6,
           ),
-          SnappingPosition.factor(
+           SnappingPosition.factor(
             grabbingContentOffset: GrabbingContentOffset.bottom,
             snappingCurve: Curves.linearToEaseOut,
             snappingDuration: Duration(seconds: 1),
@@ -108,7 +108,7 @@ class _CurrentLocationState extends State<CurrentLocation> {
   Widget grableView() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: Get.width * 0.3),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -273,7 +273,7 @@ class _CurrentLocationState extends State<CurrentLocation> {
               // ),
             
               PrimaryButton(text: 'Next', onTap: (){
-                Get.to(HomeScreen());
+                Get.to(const HomeScreen());
               })
               // isStart
               //     ? PrimaryButton(
