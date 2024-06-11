@@ -1,23 +1,9 @@
-import 'package:career_center/widgets/primary_button.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AppColors {
-// static const primarybackgroundcolor=Color(0xffFFFFFF);
-
-  // static const  appbackgroundColor=Color(0xff09090B);
-  // static const primarycardColor=Color(0xffBEF264);
-
-  // static const primaryyellowColor=Color(0xffFDF866);
-  // static const primaryskyColor=Color(0xffA5F3FC);
-  // static const primarylimeCardColor=Color(0xffC5F15B);
 
   static const primarybackColor = Color(0xff000000);
-  // static const primaryredcardColor=Color(0xffFCA5A5);
-  // static const primarygreencardColor=Color(0xff6EE7B7);
-  // static const primaryyellowcardColor=Color(0xffFCD34D);
-  // static const primarybluecardColor=Color(0xff93C5FD);
-  // static const primaryorgancardColor=Color(0xffFDBA74);
+  
   static const primaryappcolor = Color(0xff558AF0);
   static const headingcolor = Color(0xff0C092A);
   // #6EE7B7   FCD34D  93C5FD   FDBA74
