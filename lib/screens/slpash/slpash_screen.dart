@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void checkIntro() {
     Timer(const Duration(seconds: 4), () {
-         Get.offAll(() =>  HomeScreen());
+         Get.offAll(() =>  const HomeScreen());
       // if(GetStorage().read(ApiConstants.userToken)==null){
       //   Navigator.of(context).push(
       //     MaterialPageRoute(
